@@ -20,7 +20,7 @@ public class MaridoController {
 	@Autowired
 	private MaridoDAO maridoDAO;
 
-	@CrossOrigins("*")
+	@CrossOrigin("*")
 	@PostMapping(value="/cadastrarServico")
 	public ResponseEntity<?> cadastrarServico(@RequestBody ServicoDomain servicoDomain) {
 		
@@ -33,7 +33,7 @@ public class MaridoController {
 		return new ResponseEntity<>(HttpStatus.OK);
 	}
 	
-	@CrossOrigins("*")
+	@CrossOrigin("*")
 	@GetMapping(value="/recuperarServicos")
 	public ResponseEntity<?> recuperarServicos() {
 		
